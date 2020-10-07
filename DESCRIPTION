@@ -1,28 +1,24 @@
 Package: satin
 Type: Package
-Title: Functions for reading and displaying satellite data for
-        oceanographic applications with R
-Version: 0.2
-Date: 2010-09-29
-Encoding: latin1
-Author: HÈctor Villalobos and Eduardo Gonz·lez-RodrÌguez
-        <egonzale@cicese.mx>
-Maintainer: HÈctor Villalobos <hvillalo@ipn.mx>
-Depends: hdf5, maptools, maps, PBSmapping, chron, plotrix
-Description: Main functions extract a user defined subset of satellite
-        data from hdf5 files which are then available for further
-        analyses and can also be displayed in maps. Currently supported
-        NOAA products includes: Advanced Very High Resolution
-        Radiometer (AVHRR); Quick Scatterometer (QuikSCAT);
-        Moderate-resolution Imaging Spectroradiometer (from Aqua
-        satellite: Aqua MODIS) and Sea-viewing Wide Field-of-view
-        Sensor (SeaWiFS). The functions have been tested with sea
-        surface temperature (SST) from AVHRR and Aqua MODIS;
-        chlorophyll-a (Chl-a) concentration from Aqua MODIS and SeaWiFS
-        and ocean surface wind speed data from QuikSCAT.
-License: GPL (>= 2)
-LazyLoad: yes
-LazyData: yes
-Packaged: 2010-10-13 16:24:55 UTC; HÈctor Villalobos
+Title: Visualisation and Analysis of Ocean Data Derived from Satellites
+Version: 1.0
+Date: 2020-09-26
+Encoding: UTF-8
+Author: H√©ctor Villalobos and Eduardo Gonz√°lez-Rodr√≠guez <egonzale@cicese.mx>
+Maintainer: H√©ctor Villalobos <hvillalo@ipn.mx>
+Description: With 'satin' functions, visualisation, data extraction and further analysis like producing climatologies from several images, and anomalies of satellite derived ocean data can be easily done.  Reading functions can import a user defined geographical extent of data stored in netCDF files.  Currently supported ocean data sources include NASA's Oceancolor web page <https://oceancolor.gsfc.nasa.gov/>, sensors VIIRS-SNPP; MODIS-Terra; MODIS-Aqua; and SeaWiFS.  Available variables from this source includes chlorophyll concentration, sea surface temperature (SST), and several others.  Data sources specific for SST that can be imported too includes Pathfinder AVHRR <https://www.ncei.noaa.gov/products/avhrr-pathfinder-sst> and GHRSST <https://www.ghrsst.org/>.  In addition, ocean productivity data produced by Oregon State University <http://sites.science.oregonstate.edu/ocean.productivity/> can also be handled previous conversion from HDF4 to HDF5 format.  Many other ocean variables can be processed by importing netCDF data files from two European Union's Copernicus Marine Service databases <https://marine.copernicus.eu/>, namely Global Ocean Physical Reanalysis and Global Ocean Biogeochemistry Hindcast.
+Depends: R (>= 3.5.0)
+License: GPL-3
+URL: https://github.com/hvillalo/satin
+BugReports: https://github.com/hvillalo/satin/issues
+Collate: satin-class.R read.cmems.R read.ghrsst.R read.nasaoc.R
+        read.osunpp.R fmainPos.R imageScale.R plot.satin.R
+        satinPalette.R quiver.R verticalProfiles.R satinDataframe.R
+        pixelate.R climatology.R crop.R extractPts.R isolines.R
+        satinMean.R anomaly.R
+Imports: ncdf4, maps, maptools, PBSmapping, grDevices, splancs, sp,
+        geosphere, graphics, methods, lubridate
+NeedsCompilation: no
+Packaged: 2020-10-01 14:19:20 UTC; hecvi
 Repository: CRAN
-Date/Publication: 2010-10-14 08:39:01
+Date/Publication: 2020-10-07 12:00:02 UTC
