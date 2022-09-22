@@ -10,12 +10,12 @@ Map of northwest Mexico obtained from GSHHG database (v2.3.7).
 This intermediate resolution map was imported from the Global Self-consistent, Hierarchical, High-resolution Geography Database by means of \code{Rgshhs} function from \pkg{maptools} package.
 }
 \source{
-  \url{ftp://ftp.soest.hawaii.edu/gshhg/gshhg-bin-2.3.7.zip}
+  \url{https://www.soest.hawaii.edu/pwessel/gshhg/gshhg-bin-2.3.7.zip}
 }
 \references{
 Wessel, P. and Smith, W. H. F. 1996 A Global Self-consistent, Hierarchical, High-resolution Shoreline Database, \emph{Journal of Geophysical Research}, \bold{101}, 8741--8743.
 }
-\seealso{ \code{\link{Rgshhs}} }
+\seealso{ \code{Rgshhs} }
 \examples{
 library(sp)
 data(dmap)
